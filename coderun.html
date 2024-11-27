@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Runner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+    }
+
+    textarea {
+      width: 90%;
+      height: 200px;
+      margin: 10px 0;
+      font-family: monospace;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .browser {
+      width: 90%;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .browser-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 10px;
+      background-color: #e6e6e6;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .browser-buttons {
+      display: flex;
+      gap: 5px;
+    }
+
+    .browser-button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .browser-button.red { background-color: #ff5f57; }
+    .browser-button.yellow { background-color: #ffbd2e; }
+    .browser-button.green { background-color: #28c840; }
+
+    .browser-tab {
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .browser-address-bar {
+      padding: 5px 10px;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #ccc;
+      font-size: 14px;
+      font-family: monospace;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Code Runner</h1>
+  <textarea id="code" placeholder="Write your HTML, CSS, and JavaScript code here..."></textarea>
+  <button onclick="runCode()">Run Code</button>
+  <div class="browser">
+    <div class="browser-header">
+      <div class="browser-buttons">
+        <div class="browser-button red"></div>
+        <div class="browser-button yellow"></div>
+        <div class="browser-button green"></div>
+      </div>
+      <div class="browser-tab" id="browser-tab">Web Browser</div>
+    </div>
+    <div class="browser-address-bar" id="address-bar">mywebsiterunner.com</div>
+    <iframe id="output"></iframe>
+  </div>
+
+  <script>
+    function runCode() {
+      const code = document.getElementById('code').value;
+      const iframe = document.getElementById('output');
+      const tab = document.getElementById('browser-tab');
+      const addressBar = document.getElementById('address-bar');
+
+      // Extract the title from the entered code
+      const titleMatch = code.match(/<title>(.*?)<\/title>/i);
+      const title = titleMatch ? titleMatch[1] : "Untitled";
+
+      // Update the fake browser elements
+      tab.textContent = title;
+      addressBar.textContent = "data:text/html;charset=utf-8," + encodeURIComponent(code);
+
+      // Load the code into the iframe
+      iframe.srcdoc = code;
+    }
+  </script>
+</body>
+</html>

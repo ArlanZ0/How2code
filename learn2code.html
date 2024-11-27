@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS Step-by-Step Tutorial</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding-bottom: 80px; /* Ensure space for footer */
+      position: relative;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    code, pre {
+      display: block;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px 0;
+      font-family: monospace;
+      overflow-x: auto;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    footer a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer.show {
+      transform: translateY(0); /* Show footer */
+    }
+
+    footer.hide {
+      transform: translateY(60px); /* Hide footer */
+    }
+
+    .html-step {
+      color: black;
+    }
+
+    .css-step {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Learn HTML & CSS</h1>
+    <p>Step-by-step tutorial to master HTML structure and CSS styling</p>
+  </header>
+  
+  <main>
+    <!-- Section 1: HTML Structure -->
+    <section>
+      <h2>Step 1: The Basics of HTML <span class="html-step">(HTML)</span></h2>
+      <p>HTML stands for HyperText Markup Language, and it is the standard for creating web pages. Every HTML document begins with the <code>&lt;!DOCTYPE&gt;</code> declaration followed by the <code>&lt;html&gt;</code> element:</p>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Your content goes here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+    </section>
+
+    <!-- Section 2: Headings and Paragraphs -->
+    <section>
+      <h2>Step 2: Headings and Paragraphs <span class="html-step">(HTML)</span></h2>
+      <p>Headings help define the structure of your page. HTML offers six levels of headings from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. Use these to organize your content:</p>
+      <pre>
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;h3&gt;Sub-Subheading&lt;/h3&gt;
+      </pre>
+      <p>Paragraphs are created using the <code>&lt;p&gt;</code> tag:</p>
+      <pre>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+      </pre>
+    </section>
+
+    <!-- Section 3: Emphasis and Strong Text -->
+    <section>
+      <h2>Step 3: Emphasis and Strong Text <span class="html-step">(HTML)</span></h2>
+      <p>Use <code>&lt;em&gt;</code> for emphasized text, and <code>&lt;strong&gt;</code> for strong importance:</p>
+      <pre>
+&lt;p&gt;This is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;strong&gt;strong&lt;/strong&gt; text.&lt;/p&gt;
+      </pre>
+    </section>
+
+    <!-- Section 4: Lists -->
+    <section>
+      <h2>Step 4: Lists <span class="html-step">(HTML)</span></h2>
+      <p>Use <code>&lt;ul&gt;</code> for unordered lists and <code>&lt;ol&gt;</code> for ordered lists:</p>
+      <pre>
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;
+      </pre>
+    </section>
+
+    <!-- Section 5: Images and Links -->
+    <section>
+      <h2>Step 5: Images and Links <span class="html-step">(HTML)</span></h2>
+      <p>Use <code>&lt;img&gt;</code> to add images and <code>&lt;a&gt;</code> for links:</p>
+      <pre>
+&lt;a href="https://example.com"&gt;Click here&lt;/a&gt;
+
+&lt;img src="image.jpg" alt="Description"&gt;
+      </pre>
+    </section>
+
+    <!-- Section 6: Div, Span, and Classes -->
+    <section>
+      <h2>Step 6: Using Div and Span <span class="html-step">(HTML)</span></h2>
+      <p>The <code>&lt;div&gt;</code> tag is a block-level container, while <code>&lt;span&gt;</code> is for inline content:</p>
+      <pre>
+&lt;div class="container"&gt;
+  &lt;h1&gt;Main Heading&lt;/h1&gt;
+  &lt;span class="highlight"&gt;Inline text&lt;/span&gt;
+&lt;/div&gt;
+      </pre>
+    </section>
+
+    <!-- Section 7: Basic CSS -->
+    <section>
+      <h2>Step 7: Styling with CSS <span class="css-step">(CSS)</span></h2>
+      <p>CSS is used to style your HTML elements. You can use tags like <code>p</code>, <code>.class</code>, and <code>#id</code> to target elements:</p>
+      <pre>
+/* Styling all paragraphs */
+p {
+  color: blue;
+  font-size: 18px;
+}
+
+/* Styling an element with a class */
+.container {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Styling an element with an ID */
+#highlight {
+  color: red;
+  font-weight: bold;
+}
+      </pre>
+    </section>
+
+    <!-- Section 8: Box Model and Layout -->
+    <section>
+      <h2>Step 8: Box Model and Layout <span class="css-step">(CSS)</span></h2>
+      <p>CSS uses a box model to determine how elements are displayed. This includes margin, padding, border, and content:</p>
+      <pre>
+/* Margin: Space outside the element */
+.box {
+  margin: 20px;
+}
+
+/* Padding: Space inside the element */
+.box {
+  padding: 10px;
+}
+
+/* Border: A border around the element */
+.box {
+  border: 2px solid black;
+}
+      </pre>
+    </section>
+
+    <!-- Section 9: Positioning -->
+    <section>
+      <h2>Step 9: Positioning <span class="css-step">(CSS)</span></h2>
+      <p>Control the positioning of elements using <code>position</code>, <code>top</code>, <code>left</code>, etc. You can position an element relative to its normal position or absolutely within its container:</p>
+      <pre>
+/* Position relative to normal flow */
+.relative-box {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+
+/* Position absolutely inside a parent container */
+.absolute-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+      </pre>
+    </section>
+  </main>
+
+  <footer id="footer" class="hide">
+    <p><a href="coderun.html" target="_blank">Try the Code Runner!</a></p>
+  </footer>
+
+  <script>
+    let lastScrollY = window.scrollY;
+    const footer = document.getElementById('footer');
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      // Show footer when at bottom of page
+      if (currentScrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+        footer.classList.add('show');
+        footer.classList.remove('hide');
+      }
+      // Hide footer when scrolling up
+      else if (currentScrollY > lastScrollY) {
+        footer.classList.remove('show');
+        footer.classList.add('hide');
+      }
+      else {
+        footer.classList.remove('show');
+        footer.classList.add('hide');
+      }
+
+      lastScrollY = currentScrollY;
+    });
+  </script>
+</body>
+</html>
